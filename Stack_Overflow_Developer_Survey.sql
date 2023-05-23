@@ -78,7 +78,7 @@ DELIMITER ;
 CALL calculate_median(@median_value);
 SELECT @median_value AS MedianCompensation;
 
--- What are the most popular ways for respondents to learn to code?
+-- What are the most popular online platforms for respondents to learn to code?
 CREATE VIEW popular_learning_methods AS
 SELECT TRIM(SUBSTRING_INDEX(LearnCodeCoursesCert, ';', 1)) AS LearnCodeCoursesCert, COUNT(*) AS Frequency
 FROM survey_results
