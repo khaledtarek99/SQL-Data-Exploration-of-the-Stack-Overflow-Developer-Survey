@@ -42,7 +42,8 @@ SUBSTRING_INDEX(LanguageWantToWorkWith, ';', 1) AS LanguageWantToWorkWith, COUNT
 FROM survey_results
 WHERE LanguageHaveWorkedWith <> 'NA' and LanguageWantToWorkWith <> 'NA'
 GROUP BY LanguageWorkedWith, LanguageWantToWorkWith
-ORDER BY Frequency DESC;
+ORDER BY Frequency DESC
+LIMIT 10;
 
 -- What are the most common types of employment for respondents?
 CREATE VIEW common_employment_types AS
