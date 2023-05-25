@@ -136,7 +136,7 @@ WHERE Age <> 'NA';
 CREATE VIEW gender_breakdown AS
 SELECT 
     CASE 
-		WHEN Gender LIKE '%Woman%' THEN 'Woman'
+	WHEN Gender LIKE '%Woman%' THEN 'Woman'
         WHEN Gender LIKE '%Man%' THEN 'Man'
         ELSE 'Unknown'
     END AS GenderCategory,
