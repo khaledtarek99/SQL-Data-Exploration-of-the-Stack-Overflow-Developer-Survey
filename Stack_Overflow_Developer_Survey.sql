@@ -46,6 +46,10 @@ ORDER BY Frequency DESC
 LIMIT 10;
 
 -- What are the most common types of employment for respondents?
+UPDATE survey_results
+SET Employment = REPLACE(Employment, ';full-time', ',full-time')  -- I did the same for part-time
+WHERE Employment LIKE '%;full-time%';
+
 CREATE VIEW common_employment_types AS
 SELECT TRIM(SUBSTRING_INDEX(Employment, ';', 1)) AS Employment, COUNT(*) AS Frequency
 FROM survey_results
@@ -89,6 +93,10 @@ ORDER BY Frequency DESC
 LIMIT 10;
 
 -- What are the most popular development types for respondents?
+UPDATE survey_results
+SET DevType = REPLACE(DevType, 'Senior Executive (C-Suite; VP; etc.)', 'Senior Executive (C-Suite,VP, etc.)');
+-- I also modified Developer, and Engineer, Values
+
 CREATE VIEW popular_development_types AS
 SELECT TRIM(SUBSTRING_INDEX(DevType, ';', 1)) AS DevType, COUNT(*) AS Frequency
 FROM survey_results
@@ -156,6 +164,6 @@ SELECT WorkExp, floor(AVG(NormalizedAnnualCompensation)) AS AverageCompensation
 FROM survey_results
 WHERE WorkExp IS NOT NULL
   AND TRIM(WorkExp) <> ''
-  AND (WorkExp NOT LIKE 'NA%' OR WorkExp IS NULL)
+  AND WorkExp NOT LIKE 'NA%'
 GROUP BY WorkExp
 ORDER BY CAST(WorkExp AS UNSIGNED) DESC;
