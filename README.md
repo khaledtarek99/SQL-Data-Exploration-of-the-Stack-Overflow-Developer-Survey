@@ -29,7 +29,7 @@ The project code includes SQL queries that perform various data exploration task
   * What is the average amount of work experience for respondents?
   * What is the impact of work experience on annual compensation?
 ## Results
-![image](https://github.com/khaledtarek99/SQL-Data-Exploration-of-the-Stack-Overflow-Developer-Survey/assets/53887110/d8f5ceb2-66a7-4cb6-b79d-d0455fb11816)
+![image](https://github.com/khaledtarek99/SQL-Data-Exploration-of-the-Stack-Overflow-Developer-Survey/assets/53887110/ad393a5b-3940-4a45-93c3-bd37133bdac5)
 ##### [Dashboard](https://public.tableau.com/views/StackOverflow2022DeveloperSurvey/StackOverflow2022DeveloperSurveyDashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
 ## Usage
 To use this project, follow these steps:
