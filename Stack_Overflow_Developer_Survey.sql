@@ -1,7 +1,8 @@
 /*
 Stack Overflow 2022 Developer Survey Data Exploration 
 
-Skills used: Data manipulation,Subqueries,String functions,Conditional statements,Arithmetic calculations, Aggregate Functions, Creating Views,Creating Procedures, Converting Data Types
+Skills used: Data manipulation,Subqueries,String functions,Conditional statements,Arithmetic calculations,
+Aggregate Functions, Creating Views,Creating Procedures, Converting Data Types
 
 */
 USE survey;
